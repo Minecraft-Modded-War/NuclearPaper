@@ -6,6 +6,9 @@ Paper [![Paper Build Status](https://img.shields.io/github/actions/workflow/stat
 
 High-performance Spigot fork that aims to fix gameplay and mechanics inconsistencies.
 
+<!> Beware: This fork is made to contain features specifically tailored towards the NuclearLands server <!>
+This means that this will mess with existing Minecraft features. Please do not use this.
+
 
 **Support and Project Discussion:**
  - [Our forums](https://forums.papermc.io/), [Discord](https://discord.gg/papermc), or [IRC](https://webchat.esper.net/?channels=paper)
