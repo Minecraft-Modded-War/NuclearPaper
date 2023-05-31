@@ -1,0 +1,47 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Paneedah <paneedah.github@panada.cc>
+Date: Thu, 1 Jun 2023 00:55:41 +0100
+Subject: [PATCH] NuclearNetwork-Oxydation-Removal
+
+
+diff --git a/src/main/java/net/minecraft/world/level/block/WeatheringCopperFullBlock.java b/src/main/java/net/minecraft/world/level/block/WeatheringCopperFullBlock.java
+index 05cccc33e7745eb3a905a804b318aaa6bd440d04..a7991e85525a059a07c0896975ca0df115556b4b 100644
+--- a/src/main/java/net/minecraft/world/level/block/WeatheringCopperFullBlock.java
++++ b/src/main/java/net/minecraft/world/level/block/WeatheringCopperFullBlock.java
+@@ -1,12 +1,11 @@
+ package net.minecraft.world.level.block;
+ 
+-import net.minecraft.core.BlockPos;
+-import net.minecraft.server.level.ServerLevel;
+-import net.minecraft.util.RandomSource;
+ import net.minecraft.world.level.block.state.BlockBehaviour;
+-import net.minecraft.world.level.block.state.BlockState;
+ 
+ public class WeatheringCopperFullBlock extends Block implements WeatheringCopper {
++
++    // Nuclear Start - Removal of Copper Oxidation
++    
+     private final WeatheringCopper.WeatherState weatherState;
+ 
+     public WeatheringCopperFullBlock(WeatheringCopper.WeatherState oxidationLevel, BlockBehaviour.Properties settings) {
+@@ -15,17 +14,9 @@ public class WeatheringCopperFullBlock extends Block implements WeatheringCopper
+     }
+ 
+     @Override
+-    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+-        this.onRandomTick(state, world, pos, random);
+-    }
+-
+-    @Override
+-    public boolean isRandomlyTicking(BlockState state) {
+-        return WeatheringCopper.getNext(state.getBlock()).isPresent();
+-    }
+-
+-    @Override
+-    public WeatheringCopper.WeatherState getAge() {
++    public WeatherState getAge() {
+         return this.weatherState;
+     }
++
++    // Nuclear End
+ }
